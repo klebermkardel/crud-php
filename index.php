@@ -46,7 +46,7 @@
                             include("listar-usuario.php");
                         break;
                         default:
-                            print "Bem vindos!";
+                            print "<h1>Bem vindos!</h1>";
                     }
 
                 ?>
