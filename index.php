@@ -37,25 +37,37 @@
         <div class="row">
             <div class="col mt-5">
                 <?php
-
+                
+                    // Inclui o arquivo "config.php" que contém as configurações do sistema
                     include("config.php");
+    
+                    // Verifica o valor do parâmetro "page" passado na URL
                     switch(@$_REQUEST["page"]) {
+        
+                        // Caso o valor seja "novo", inclui o arquivo "novo-usuario.php"
                         case "novo":
                             include("novo-usuario.php");
                         break;
+        
+                        // Caso o valor seja "listar", inclui o arquivo "listar-usuario.php"
                         case "listar":
                             include("listar-usuario.php");
                         break;
+        
+                        // Caso o valor seja "salvar", inclui o arquivo "salvar-usuario.php"
                         case "salvar":
                             include("salvar-usuario.php");
                         break;
+        
+                        // Caso o valor seja "editar", inclui o arquivo "editar-usuario.php"
                         case "editar":
                             include('editar-usuario.php');
                         break;
+        
+                        // Caso o valor não seja nenhum dos valores anteriores, exibe uma mensagem de boas-vindas
                         default:
-                            print "<h1>Bem vindos!</h1>";
+                        print "<h1>Bem vindos!</h1>";
                     }
-
                 ?>
             </div>
         </div>
