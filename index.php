@@ -33,7 +33,26 @@
         </div>
     </nav>
 
-    
+    <div class="container">
+        <div class="row">
+            <div class="col mt-5">
+                <?php
+
+                    switch(@$_REQUEST["page"]) {
+                        case "novo":
+                            include("novo-usuario.php");
+                        break;
+                        case "listar":
+                            include("listar-usuario.php");
+                        break;
+                        default:
+                            print "Bem vindos!";
+                    }
+
+                ?>
+            </div>
+        </div>
+    </div>
 
     <script src="js/bootstrap.bundle.min.js"></script>
   </body>
