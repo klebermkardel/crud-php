@@ -12,21 +12,21 @@ Este é um projeto simples em PHP que permite criar, ler, atualizar e deletar us
 
 1. Clone o repositório para o diretório raiz do servidor web:
 
-- git clone https://github.com/seu-usuario/crud-php.git
+ git clone https://github.com/seu-usuario/crud-php.git
 
 2. Crie um banco de dados MySQL com as seguintes informações:
 
-- Nome do banco de dados: cadastro
-- Usuário: root
-- Senha: (deixe em branco)
+ Nome do banco de dados: cadastro
+ Usuário: root
+ Senha: (deixe em branco)
 
 3. Importe o arquivo crud_php.sql para o banco de dados recém-criado:
 
-- mysql -u root -p crud_php < crud_php.sql
+ mysql -u root -p crud_php < crud_php.sql
 
 Acesse o projeto através do seu navegador web, no endereço:
 
-- http://localhost/crud-php
+ http://localhost/crud-php
 
 ## Utilização
 
