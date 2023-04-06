@@ -1,4 +1,4 @@
-<h1>Listar Usuários</h1>
+<h1 class="mb-3">Listar Usuários</h1>
 <?php
 
     // Consulta o banco de dados
@@ -23,14 +23,13 @@
             print "<td>".$row->data_nasc."</td>";
             print "<td>
                     <button onclick=\"location.href='?page=editar&id=".$row->id."';\" class='btn btn-success'>Editar</button>
-                    <button onclick=\"
-                    if(confirm('Tem certeza que deseja excluir o usuário?'){location.href='?page=salvar&id=".$row->id."';}else{false;}\" class='btn btn-danger'>Excluir</button>
+                    <button onclick=\"if(confirm('Tem certeza que deseja excluir esse o usuário $row->nome?')){location.href='?page=salvar&acao=excluir&id=".$row->id."';}else{false;}\" class='btn btn-danger'>Excluir</button>
                   </td>";
             print "</tr>";
         }
         print "</table>";
     } else {
-        print "<p class='mt-3 p-4 aler alert-danger'>Nenhum usuário cadastrado.</p>";
+        print "<p class='mt-3 p-4 alert alert-danger'>Nenhum usuário cadastrado.</p>";
     }
 
 ?>
