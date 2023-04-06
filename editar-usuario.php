@@ -1,9 +1,10 @@
 <h1>Editar Usuário</h1>
 <?php
 
-    // Busca usuário com id específica no banco de dados
+    // Consulta usuário através de sua id na tabela usuários
     $sql = "SELECT * FROM usuarios WHERE id=".$_REQUEST["id"];
 
+    // Executa a consulta e armazena o resultado em "$res"
     $res = $conn->query($sql);
 
     $row = $res->fetch_object();
