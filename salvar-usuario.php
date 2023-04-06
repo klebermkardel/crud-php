@@ -23,7 +23,29 @@
 
         break;
         case "editar":
-            //code
+            $nome = $_POST["nome"];
+            $email = $_POST["email"];
+            $senha = md5($_POST["senha"]);
+            $data_nasc = $_POST["data_nasc"];
+
+            // Inserção dos dados no banco de dados
+            $sql = "UPDATE usuarios SET
+                        nome='{$nome}',
+                        email='{$email}',
+                        senha='{$senha}',
+                        data_nasc='{$data_nasc}'
+                        WHERE
+                            id=".$_REQUEST["id"];
+
+            $res = $conn->query($sql);
+
+            if($res == true) {
+                print "<script>alert('Usuário editado com sucesso!');</script>";
+                print "<script>location.href='?page=listar';</script>";
+            } else {
+                print "<script>alert('Não foi possível editar o usuário!');</script>";
+                print "<script>location.href='?page=listar';</script>";
+            }
         break;
         case "excluir":
             //code
